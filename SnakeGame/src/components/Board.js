@@ -1,7 +1,7 @@
 import React from "react";
 import { StylesSheet, View } from "react-native";
-import { color } from '../styles/theme';
-import { BORDER, BORDER_RADIUS, GAP, HEADER_HEIGHT, HEADER_HEIGT, PIXEL } from "..//consts";
+import { color, colors } from '../styles/theme';
+import { BORDER, BORDER_RADIUS, GAP, HEADER_HEIGT, PIXEL } from "..//consts";
 
 const Board = ({ rows, cols, top}) => {
     const dots  = Array(rows * cols).fill(0);
@@ -29,6 +29,9 @@ const styles = StylesSheet.create({
         borderWidth: GAP,
         borderRadius: BORDER_RADIUS,
         backgroundColor: colors.p5,
-        acabamos aqui
-    }
-})
+        justifyContent: "center",
+        alingItems: "center",
+    },
+});
+
+export default Board
