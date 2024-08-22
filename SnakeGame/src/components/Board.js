@@ -1,20 +1,20 @@
 import React from "react";
-import { StylesSheet, View } from "react-native";
-import { color, colors } from '../styles/theme';
-import { BORDER, BORDER_RADIUS, GAP, HEADER_HEIGT, PIXEL } from "..//consts";
+import { StyleSheet, View } from "react-native";
+import { colors } from '../styles/theme';
+import { BORDER, BORDER_RADIUS, GAP, HEADER_HEIGHT, PIXEL } from "../consts";
 
 const Board = ({ rows, cols, top}) => {
     const dots  = Array(rows * cols).fill(0);
     return (
         <View style={[styles.board, { top: HEADER_HEIGHT  + top }]}>
             {dots.map((_, index ) => (
-                <View style={tyles.pixel} key={index}></View>
+                <View style={styles.pixel} key={index}></View>
             ))}
         </View>
     )
 }
 
-const styles = StylesSheet.create({
+const styles = StyleSheet.create({
     board: {
         display: "flex",
         flexDirection: "row",
@@ -25,7 +25,7 @@ const styles = StylesSheet.create({
     pixel: {
         width: PIXEL,
         height: PIXEL,
-        borderColor: color.p6,
+        borderColor: colors.p6,
         borderWidth: GAP,
         borderRadius: BORDER_RADIUS,
         backgroundColor: colors.p5,
